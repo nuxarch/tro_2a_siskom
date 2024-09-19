@@ -1,63 +1,46 @@
-
-// listing program ini melingkupi materi
+// materi string
 #include <iostream>
 
 using namespace std;
 
 int main()
 {
-    cout << "contoh  operator aritmatika +" << endl;
-    int a = 10;
-    int b = 20;
-    int hasil = 2 + 4; // hasil <- 6
-    hasil = hasil + a; // 6 + 10 = 16
-    hasil = hasil + b; // 16 + 20 = 36
-    cout << "var hasil :" << hasil << endl;
+    string firstName = "John ";
+    string lastName = "Doe\n";
+    string fullName = firstName + lastName;
+    cout << fullName;
 
-    cout << "contoh  operator aritmatika %(modulus)" << endl;
-    a = 1;
-    b = 2;
-    hasil = a % b; // 10 % 2=0
-    cout << "var hasil :" << hasil << endl;
+    firstName = "John";
+    firstName.append(" Red ");
+    lastName = "Doe";
+    fullName = firstName + " Dwaine " + lastName;
+    cout << fullName;
+    cout << endl
+         << firstName.length() << lastName.length() << endl;
+    firstName[3] = 'e';
+    cout << "mengakses via index[]" << endl;
+    cout << firstName[0] << endl;
+    cout << firstName[1] << endl;
+    cout << firstName[2] << endl;
+    cout << firstName[3] << endl;
+    cout << firstName[4] << endl;
+    cout << "mengakses via .at()" << endl;
+    cout << firstName.at(0) << endl;
+    cout << firstName.at(1) << endl;
+    cout << firstName.at(2) << endl;
+    cout << firstName.at(3) << endl;
+    cout << firstName.at(4) << endl;
 
-    cout << "contoh  operator aritmatika ++(increment) dan --(decrement)" << endl;
-    a = 1;
-    b = 2;
-    ++a;
-    a++;
-    b--;
-    --b;
-    cout << "var a :" << a << endl;
-    cout << "var b :" << b << endl;
+    string parts = "busi \"Volta\" ";
+    cout << parts << endl;
 
-    cout << "contoh operator assignments" << endl;
-    a = 10;
-    b = 1;
-    b += 2; // b = b+2  --> b = 1 + 2
-    cout << "var b :" << b << endl;
-    a %= b; // a = a%b --> a = 10 % 3
-    cout << "var a :" << a << endl;
+    int tahun_lahir;
+    string nama;
 
-    bool x = true;
-    bool y = true;
-    bool z = false;
-    x &= y; // x = x & y --> x = true & true
-    y |= z; // y = y | z --> y = true | false
-    cout << "Hasil var x:" << x << endl;
-    cout << "Hasil var y:" << y << endl;
-
-    cout << "contoh operator perbandingan" << endl;
-    a = 20;
-    b = 21;
-    cout << "contoh operator perbandingan ==:" << (a == b) << endl;          // 0
-    cout << "contoh operator perbandingan !=:" << (a != b) << endl;          // 1
-    cout << "contoh operator perbandingan <:" << (a < b) << endl;            // 1
-    cout << "contoh operator perbandingan <=:" << (a <= b) << endl;          // 1
-    cout << "contoh operator perbandingan >:" << (a > b) << endl;            // 0
-    cout << "contoh operator perbandingan >=:" << (a >= b) << endl;          // 0
-    cout << "contoh operator logika && :" << ((a == b) && (a != b)) << endl; // 0
-    cout << "contoh operator logika || :" << ((a == b) || (a != b)) << endl; // 1
-    cout << "contoh operator logika ! :" << !((a == b) || (a != b)) << endl; // 0
-
+    cout << "masukkan nama anda:";
+    getline(cin, nama);
+    cout << "masukkan tahun lahir:";
+    cin >> tahun_lahir;
+    cout << "umur " << nama << " adalah:" << 2024 - tahun_lahir << " Tahun" << endl;
     return 1;
 }
