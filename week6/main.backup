@@ -1,0 +1,52 @@
+#include <iostream>
+#include <string>
+#include <cstring>
+
+using namespace std;
+string platno = "";
+int main()
+{
+    // platno = "N1234NN"; // 7 char
+    // platno = "N1234NNN"; // 8-1 char
+    // platno = "AG1234NN"; // 8-2 char
+    platno = "AG1233NNN"; // 9 char
+    int angka = 0;
+    bool isGanjil = true;
+
+    // hitung dulu berapa jumlah karakternya menggunakan .length()
+    int jumlahChar = platno.size();
+    if (jumlahChar == 7)
+    {
+        cout << platno.length() << ": [" << platno.substr(1, 4) << "]" << endl;
+        angka = stoi(platno.substr(1, 4));
+    }
+    if (jumlahChar == 8)
+    {
+        if (isnumber(platno[1]))
+        {
+            cout << platno.length() << ": 8-1[" << platno.substr(1, 4) << "]" << endl;
+            angka = stoi(platno.substr(1, 4));
+        }
+        else
+        {
+            cout << platno.length() << ": 8-2[" << platno.substr(2, 4) << "]" << endl;
+            angka = stoi(platno.substr(2, 4));
+        }
+    }
+    if (jumlahChar == 9)
+    {
+        cout << platno.length() << ": [" << platno.substr(2, 4) << "]" << endl;
+        angka = stoi(platno.substr(2, 4));
+    }
+
+    isGanjil = angka % 2;
+    if (isGanjil)
+    {
+        cout << "ganjil" << endl;
+    }
+    else
+    {
+        cout << "genap" << endl;
+    }
+    return 0;
+}

@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/fatkhurrohman/0_KULIAH/GANJIL-2024:2025/2A_TRO_SISKOM/week3",
-      "program": "/Users/fatkhurrohman/0_KULIAH/GANJIL-2024:2025/2A_TRO_SISKOM/week3/build/Debug/outDebug"
+      "cwd": "/Users/fatkhurrohman/0_KULIAH/GANJIL-2024:2025/2A_TRO_SISKOM/week4",
+      "program": "/Users/fatkhurrohman/0_KULIAH/GANJIL-2024:2025/2A_TRO_SISKOM/week4/build/Debug/outDebug"
     }
   ]
 }
